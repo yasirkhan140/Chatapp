@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  
+}
+.main-box-messages::-webkit-scrollbar{
+  width: 1.5px;
+  
+}
+.main-box-messages::-webkit-scrollbar-track {
+  background: #afacff;
+}
+.main-box-messages::-webkit-scrollbar-thumb {
+  background: #39316a;
+}
+
+
+
+@media screen and (max-width:1400px) {
+  .main-box{
+    width: 70% !important;
+  }
+  
+
+}
+@media screen and (max-width:1200px) {
+  .main-box{
+    width: 80% !important;
+  }
+  
+}
+@media screen and (max-width:1000px) {
+  .main-box{
+    width: 95% !important;
+  }
+  
+}
+@media screen and (max-width:786px) {
+  .main-box{
+    width: 100% !important;
+  }
+  
+}
+@media screen and (max-width:786px) {
+  .main-box{
+    width:100vw !important;
+  }
+  
+}
+@media screen and (max-width:412px) {
+  .chat{
+    padding-top: px;
+  }
+  .main-box{
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .home-box{
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 90vh !important;
+    overflow: inherit;
+  }
+}
+
