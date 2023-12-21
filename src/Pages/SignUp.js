@@ -44,27 +44,27 @@ const SignUp=()=>{
             const res = await createUserWithEmailAndPassword(auth, email, password)
             const storageRef = ref(storage, name);
             
-            // const uploadTask =  uploadBytesResumable(storageRef, file);
-            // uploadTask.on( 
+            const uploadTask =  uploadBytesResumable(storageRef, file);
+            uploadTask.on( 
                 
-            //     (error) => {
-            //         toast({
-            //             title:'Something get wrong',
-            //             status:"error",
-            //             duration:'2000',
-            //             isClosable:true
-            //         })
-            //         console.log(error);
-            //     }, 
-            //     () => {
+                (error) => {
+                    toast({
+                        title:'Something get wrong',
+                        status:"error",
+                        duration:'2000',
+                        isClosable:true
+                    })
+                    console.log(error);
+                }, 
+                () => {
                    
-            //         getDownloadURL(uploadTask.snapshot.ref)
-            //         .then(async(downloadURL) => {
-            //             console.log(downloadURL);
-            //             await updateProfile(res.user,{
-            //                 displayName:name,
-            //                 photoURL:downloadURL,
-            //             });
+                    getDownloadURL(uploadTask.snapshot.ref)
+                    .then(async(downloadURL) => {
+                        console.log(downloadURL);
+                        await updateProfile(res.user,{
+                            displayName:name,
+                            photoURL:downloadURL,
+                        });
                         
                         await setDoc(doc(db,"users",res.user.uid),{
                             userName:userName,
@@ -78,10 +78,10 @@ const SignUp=()=>{
                     })
                     
                     navigate('/')
-                // }
+                }
 
                 
-            // );
+            );
             
         }catch(err){
             toast({
